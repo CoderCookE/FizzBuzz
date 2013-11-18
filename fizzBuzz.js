@@ -1,16 +1,20 @@
+var printToScreen = function(text){
+	document.getElementById('demo').innerHTML += text + "<br>";
+}
+
 var fizzBuzz = function(){
 	var n = prompt("Pick an upperbound for fizzBuzz");
 	for(var i = 1; i <= n; i++){
 		if(i%3 === 0 && i%5=== 0){
-			document.getElementById('demo').innerHTML += "fizzBuzz <br>";
+			printToScreen("fizzBuzz")
 		}else if(i%3 ===0){
-			document.getElementById('demo').innerHTML += "fizz <br>";
+			printToScreen("fizz");
 		}else if(i%5 ===0){
-			document.getElementById('demo').innerHTML += "Buzz <br>";
+			printToScreen("Buzz");
 		}else{
-			document.getElementById('demo').innerHTML += i + "<br>";
+			printToScreen(i);
 		}
 	}
 
-
 }
+
